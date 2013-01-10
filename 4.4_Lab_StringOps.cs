@@ -8,18 +8,20 @@ class String_Operations
 		int LastNum = StrLen - 1;
 		string LastStr = S.Substring(LastNum, 1);
 		
-		if(LastStr == ".") {
-			Console.WriteLine("You have entered a declarative sentence.");
+		switch(LastStr){
+			case ".":
+				Console.WriteLine("You have entered a declarative sentence.");
+				break;
+			case "?":
+				Console.WriteLine("You have entered an interrogatory sentence.");
+				break;
+			case "!":
+				Console.WriteLine("You have entered an exclamatory sentence.");
+				break;
+			default:
+				Console.WriteLine("YYou did not enter a sentence");
+				break;	
 		}
-		else if(LastStr == "?") {
-			Console.WriteLine("You have entered an interrogatory sentence.");
-		}
-		else if(LastStr == "!") {
-			Console.WriteLine("You have entered an exclamatory sentence.");
-		}
-		else {
-			Console.WriteLine("You did not enter a sentence.");
-			}
 	} 
 	
 	static void name(string fullName)
